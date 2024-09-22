@@ -37,6 +37,7 @@ Ein 2D-Top-Down RPG mit Fantasy Elementen und Rundenbasierten Kämpfen.
 - NPC-Design
 - Gegnerdesign
 - Kampfkonzept erstellen
+- Redesign der Sprites
 
 ## Publishing
 
