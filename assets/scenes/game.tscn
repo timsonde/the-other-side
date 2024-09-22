@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://brqcm0h8hix1l"]
+
+[ext_resource type="PackedScene" uid="uid://dvs6yluum2h5b" path="res://assets/scenes/home.tscn" id="1_kq4ql"]
+[ext_resource type="PackedScene" uid="uid://0puxvn6g3nob" path="res://assets/scenes/hunter.tscn" id="2_7upmb"]
+
+[node name="Game" type="Node"]
+
+[node name="Home" parent="." instance=ExtResource("1_kq4ql")]
+
+[node name="Hunter" parent="Home" instance=ExtResource("2_7upmb")]
+
+[node name="Camera2D" type="Camera2D" parent="Home/Hunter"]
+zoom = Vector2(3, 3)

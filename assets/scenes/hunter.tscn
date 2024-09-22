@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://0puxvn6g3nob"]
+
+[ext_resource type="Texture2D" uid="uid://dcchd1kjeupny" path="res://assets/sprites/Hunter.png" id="1_a0cbp"]
+[ext_resource type="Script" path="res://assets/scripts/hunter.gd" id="1_ftslw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmuno"]
+atlas = ExtResource("1_a0cbp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krf2c"]
+atlas = ExtResource("1_a0cbp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_whbyv"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_cmuno")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_krf2c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pq8ab"]
+radius = 6.0
+
+[node name="Hunter" type="CharacterBody2D"]
+script = ExtResource("1_ftslw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_whbyv")
+autoplay = "default"
+frame_progress = 0.46637
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_pq8ab")
