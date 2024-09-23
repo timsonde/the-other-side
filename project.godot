@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="the other side"
+config/version="0.00.000"
 run/main_scene="res://assets/scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
