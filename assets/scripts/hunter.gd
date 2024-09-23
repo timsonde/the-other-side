@@ -1,7 +1,7 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 
-const SPEED = 150.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 
 
@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	
 	if directionX or directionY: 
 		var diag = 1
-		if directionY:
+		if directionY and directionX:
 			diag = 0.75
 		velocity.x = directionX * SPEED * diag
 		velocity.y = directionY * SPEED * diag
