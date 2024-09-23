@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c86ba2pjb0iub"]
+
+[ext_resource type="AudioStream" uid="uid://c6uo2duixwmjl" path="res://assets/music/Mixdown.ogg" id="1_uvoco"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_uvoco")
+autoplay = true
+bus = &"Music"
