@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://byfbptwkdr7ac"]
+
+[ext_resource type="Texture2D" uid="uid://db5wwoou1gr83" path="res://assets/sprites/Zombie.png" id="1_jj6b1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywfk0"]
+atlas = ExtResource("1_jj6b1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru8o4"]
+atlas = ExtResource("1_jj6b1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30u6w"]
+atlas = ExtResource("1_jj6b1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3j6f"]
+atlas = ExtResource("1_jj6b1")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4f716"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywfk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru8o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30u6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3j6f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_415rx"]
+radius = 16.0
+
+[node name="Zombie" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_4f716")
+autoplay = "default"
+frame_progress = 0.0590158
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_415rx")
