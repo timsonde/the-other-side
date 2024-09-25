@@ -34,7 +34,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_d3j6f")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -46,10 +46,14 @@ radius = 16.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(0, -16)
+scale = Vector2(0.514687, 0.507888)
 sprite_frames = SubResource("SpriteFrames_4f716")
-autoplay = "default"
-frame_progress = 0.0590158
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_415rx")
