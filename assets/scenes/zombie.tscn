@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_415rx"]
-radius = 16.0
+radius = 8.0
 
 [node name="Zombie" type="CharacterBody2D"]
 
@@ -51,9 +51,10 @@ scale = Vector2(0.514687, 0.507888)
 sprite_frames = SubResource("SpriteFrames_4f716")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.313739
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(0, -16)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_415rx")
