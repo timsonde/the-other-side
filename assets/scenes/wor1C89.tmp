@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bjgekmiuo0of"]
+[gd_scene load_steps=9 format=4 uid="uid://bjgekmiuo0of"]
 
 [ext_resource type="Script" path="res://assets/scripts/world.gd" id="1_c8kfo"]
 [ext_resource type="PackedScene" uid="uid://0puxvn6g3nob" path="res://assets/scenes/hunter.tscn" id="2_a8hsa"]
@@ -10,9 +10,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gm7g"]
 size = Vector2(14, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dq3ux"]
-size = Vector2(14, 12)
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -42,7 +39,7 @@ z_index = 2
 [node name="Buildings" type="TileMapLayer" parent="Map"]
 z_index = 2
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAARAAMAAAAOAAAAAAD9//v/AAAOAAAAAAA=")
+tile_map_data = PackedByteArray("AAARAAMAAAAOAAAAAAA=")
 tile_set = ExtResource("3_x8hnv")
 
 [node name="Zombie" parent="." instance=ExtResource("4_r1qhs")]
@@ -74,23 +71,7 @@ connected_scene = "home"
 position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_5gm7g")
 
-[node name="SceneTrigger2" parent="." instance=ExtResource("5_g4lsi")]
-position = Vector2(-257, -58)
-connected_scene = "House"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger2"]
-z_index = 3
-y_sort_enabled = true
-position = Vector2(1, -4)
-shape = SubResource("RectangleShape2D_dq3ux")
-
 [node name="EntranceMarkers" type="Node2D" parent="."]
-
-[node name="Home" type="Marker2D" parent="EntranceMarkers"]
-position = Vector2(64, 82)
-
-[node name="House" type="Marker2D" parent="EntranceMarkers"]
-position = Vector2(-257, -44)
 
 [node name="follow_cam" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap", "follow_node")]
 position = Vector2(-256, -87)
