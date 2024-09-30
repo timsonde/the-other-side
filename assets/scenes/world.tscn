@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bjgekmiuo0of"]
+[gd_scene load_steps=11 format=4 uid="uid://bjgekmiuo0of"]
 
 [ext_resource type="Script" path="res://assets/scripts/world.gd" id="1_c8kfo"]
 [ext_resource type="PackedScene" uid="uid://0puxvn6g3nob" path="res://assets/scenes/hunter.tscn" id="2_a8hsa"]
@@ -13,6 +13,9 @@ size = Vector2(14, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq3ux"]
 size = Vector2(14, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvyx8"]
+size = Vector2(14, 20)
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -84,6 +87,15 @@ y_sort_enabled = true
 position = Vector2(1, -4)
 shape = SubResource("RectangleShape2D_dq3ux")
 
+[node name="SceneTrigger3" parent="." instance=ExtResource("5_g4lsi")]
+position = Vector2(-57, 117)
+connected_scene = "House2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger3"]
+z_index = 2
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_xvyx8")
+
 [node name="EntranceMarkers" type="Node2D" parent="."]
 
 [node name="Home" type="Marker2D" parent="EntranceMarkers"]
@@ -91,6 +103,9 @@ position = Vector2(64, 82)
 
 [node name="House" type="Marker2D" parent="EntranceMarkers"]
 position = Vector2(-257, -44)
+
+[node name="House2" type="Marker2D" parent="EntranceMarkers"]
+position = Vector2(-57, 138)
 
 [node name="follow_cam" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap", "follow_node")]
 position = Vector2(-256, -87)
