@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 Music="*res://assets/scenes/music.tscn"
 scene_manager="*res://assets/scripts/scene_manager.gd"
+SignalBus="*res://assets/scripts/signal_bus.gd"
 
 [input]
 
@@ -54,6 +55,7 @@ move_down={
 2d_physics/layer_2="enemy"
 2d_physics/layer_3="hitBoxes"
 2d_physics/layer_4="trigger"
+2d_physics/layer_5="dialogs"
 
 [rendering]
 
