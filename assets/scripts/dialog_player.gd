@@ -18,6 +18,7 @@ func _ready() -> void:
 	text_label.text = ""
 	scene_text = load_scene_text()
 	SignalBus.display_dialog.connect(on_display_dialog)
+	SignalBus.dialog_area_exited.connect(on_dialog_area_exit)
 
 func load_scene_text():
 	var full_path = path+scene_text_file+".json"
@@ -45,8 +46,11 @@ func on_display_dialog(text_key: String) -> void:
 	if in_progress:
 		next_line()
 	else:
-		get_tree().paused = true
+		#get_tree().paused = true
 		background.visible = true
 		in_progress = true
 		selected_text = scene_text[text_key].duplicate()
 		show_text()
+
+func on_dialog_area_exit() -> void:
+	finish()

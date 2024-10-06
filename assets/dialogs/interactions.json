@@ -3,10 +3,13 @@
 		"I'm a zombie... and...",
 		"I like brains...",
 		"I'm hungry",
-		"Guhrrrrr"
+		"Guhrrrrr.\n Grrr"
 	],
 	"tree": [
 		"This is a tree",
 		"Just a normal tree"
+	],
+	"house": [
+		"This is my house!"
 	]
 }
