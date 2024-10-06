@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://bjgekmiuo0of"]
+[gd_scene load_steps=14 format=4 uid="uid://bjgekmiuo0of"]
 
+[ext_resource type="Script" path="res://assets/scripts/world.gd" id="1_0i75d"]
 [ext_resource type="PackedScene" uid="uid://0puxvn6g3nob" path="res://assets/scenes/hunter.tscn" id="2_a8hsa"]
 [ext_resource type="TileSet" uid="uid://dvvna3itx8jwu" path="res://assets/tile_sets/Terrains.tres" id="2_wh22u"]
 [ext_resource type="TileSet" uid="uid://bjbkv77td7t1b" path="res://assets/tile_sets/indoor.tres" id="3_x8hnv"]
@@ -18,12 +19,13 @@ size = Vector2(14, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvyx8"]
 size = Vector2(14, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfmq"]
-size = Vector2(28, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdldj"]
+size = Vector2(106, 20)
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(304, 155)
+script = ExtResource("1_0i75d")
 
 [node name="Map" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -74,7 +76,7 @@ y_sort_enabled = true
 position = Vector2(64, 73)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "home"
+connected_scene = "Home"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
 position = Vector2(0, -10)
@@ -119,16 +121,15 @@ script = ExtResource("7_h42ln")
 tilemap = NodePath("../Map/Ground")
 follow_node = NodePath("../Hunter")
 
-[node name="DialogAreaZombie" parent="." instance=ExtResource("8_1b63m")]
-position = Vector2(-3, -15)
-dialog_key = "zombie"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogAreaZombie"]
-z_index = 3
-position = Vector2(0, -3)
-shape = SubResource("RectangleShape2D_fkfmq")
-
 [node name="DialogPlayer" parent="." instance=ExtResource("9_6gpu7")]
 scene_text_file = "interactions"
+
+[node name="DialogArea" parent="." instance=ExtResource("8_1b63m")]
+z_index = 3
+position = Vector2(87, 78)
+dialog_key = "house"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogArea"]
+shape = SubResource("RectangleShape2D_kdldj")
 
 [connection signal="ready" from="follow_cam" to="follow_cam" method="_on_ready"]
