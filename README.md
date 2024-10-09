@@ -1,7 +1,7 @@
 # the other side
 
 ## Entwickler
-- Tim Neunherz (Head of Development)
+- timsonde
 
 ## Contributors
 | Name | Type | Feature |
