@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://0puxvn6g3nob"]
 
-[ext_resource type="Texture2D" uid="uid://dcchd1kjeupny" path="res://assets/sprites/Hunter.png" id="1_a0cbp"]
-[ext_resource type="Script" path="res://assets/scripts/hunter.gd" id="1_ftslw"]
+[ext_resource type="Texture2D" uid="uid://dcchd1kjeupny" path="res://assets/entities/hunter/Hunter.png" id="1_a0cbp"]
+[ext_resource type="Script" path="res://assets/entities/hunter/hunter.gd" id="1_ftslw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cmuno"]
 atlas = ExtResource("1_a0cbp")

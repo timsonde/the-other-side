@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://byfbptwkdr7ac"]
 
-[ext_resource type="Texture2D" uid="uid://db5wwoou1gr83" path="res://assets/sprites/Zombie.png" id="1_jj6b1"]
-[ext_resource type="PackedScene" uid="uid://q2bwlh20v5ik" path="res://assets/scenes/dialog_area.tscn" id="2_1ub83"]
+[ext_resource type="Texture2D" uid="uid://db5wwoou1gr83" path="res://assets/entities/zombie/Zombie.png" id="1_jj6b1"]
+[ext_resource type="PackedScene" uid="uid://q2bwlh20v5ik" path="res://assets/scenes/dialogs/dialog_area.tscn" id="2_1ub83"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywfk0"]
 atlas = ExtResource("1_jj6b1")
