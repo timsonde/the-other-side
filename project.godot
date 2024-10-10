@@ -12,15 +12,19 @@ config_version=5
 
 config/name="the other side"
 config/version="0.00.000"
-run/main_scene="res://assets/scenes/world.tscn"
+run/main_scene="res://assets/scenes/locations/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Music="*res://assets/scenes/music.tscn"
+Music="*res://assets/scenes/music/music.tscn"
 scene_manager="*res://assets/scripts/scene_manager.gd"
 SignalBus="*res://assets/scripts/signal_bus.gd"
+
+[display]
+
+window/size/mode=3
 
 [input]
 
